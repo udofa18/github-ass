@@ -7,7 +7,9 @@ import { Helmet } from "react-helmet";
 import Pagination from "../pagenation";
 
 function Repository(){
-    const [items, setItems] = useState()
+    const [items, setItems] = useState([]);
+    const [currentPage, setCurrentPage] = useState (1);
+    const [postPerPage] = useState (3)
 
     useEffect(() => {
       const fetchRepos = async () => {
@@ -22,14 +24,19 @@ function Repository(){
 
         }
          fetchRepos() 
-    }, [])
+    }, []);
+
+    const indexOfLastPost = currentPage * postPerPage;
+    const indexOfFirstPost = indexOfLastPost - postPerPage;
+    const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost); 
 
       
 
-
+    const paginate= (pageNumber) => setCurrentPage (pageNumber)
     return(
       
 <div>
+
 
 <Helmet>
         <title>Repositories</title>
@@ -41,14 +48,14 @@ Click <Link to="/FirstRepo" className="text-emerald-400" > Here</Link> to see De
         <Loading />
       ) : (
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 pb-20">
-        {items.map((item) => (
+        {currentPosts.map((item) => (
             <Profile key={item.id} {...item} />
           ))}
         </div>
       )}
-      
-  <div>{Pagination}</div>
-
+      <Pagination postPerPage= {postPerPage} totalRepo={items.length} paginate ={paginate}/>
+  
+    
 
 </div>
 )

@@ -1,57 +1,27 @@
-import { useState } from "react";
 
-const Pagination = (props) => {
-  const totalRepo = props.totalRepo;
-  const repoPerPage = props.repoPerPage;
+const Pagination = ({ postPerPage, totalRepo, paginate}) => {
+ 
+  const pageNumbers =[];
+  for (let i =1; i<= Math.ceil(totalRepo / postPerPage); i++){
+    pageNumbers.push(i);
+  }
 
-  const totalPage = Math.ceil(totalRepo / repoPerPage);
 
-  const [page, setPage] = useState(1);
-
-  const prevHandler = () => {
-    if (page === 1) return;
-    setPage((prevPage) => prevPage - 1);
-    props.onChange(page - 1);
-  };
-  const nextHandler = () => {
-    if (page === totalPage) return;
-    setPage((prevPage) => prevPage + 1);
-    props.onChange(page + 1);
-  };
 
   return (
-    <>
-      <div>
-        <div className="buttons">
-          <button
-            className={page === 1 ? "disabled" : ""}
-            onClick={prevHandler}
-          >
-            Prev
-          </button>
-          <p>{page}</p>
-          <button
-            className={page === totalPage ? "disabled" : ""}
-            onClick={nextHandler}
-          >
-            Next
-          </button>
-        </div>
-        {Array.from({ length: totalPage }, (_, index) => index + 1).map(
-          (each) => (
-            <button
-              onClick={() => {
-                setPage(each);
-                props.onChange(page);
-              }}
-              key={each}
-            >
-              {each}
-            </button>
-          )
-        )}
-      </div>
-    </>
-  );
+    <div className="pagination mb-7">
+    
+    <button className="m-auto flex justify-center ">
+      {pageNumbers.map(number => (
+        <li key={number} className="mx-3 hover:scale-110	rounded-md border-solid	border-2 hover:bg-emerald-700 px-1 text-center ">
+          <a onClick={()=> paginate (number) } href="#" className="px-4">
+            {number} 
+          </a>
+        </li>
+      ))} 
+    </button>
+   
+    </div>
+  )
 };
 export default Pagination;

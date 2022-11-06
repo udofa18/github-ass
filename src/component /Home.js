@@ -30,6 +30,9 @@ function Home() {
                 SEO Friendly
             </li>
             <li>
+                Pagenation
+            </li>
+            <li>
                 API from my GitHub Repository
             </li>
             <li>
