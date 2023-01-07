@@ -41,9 +41,9 @@ function Repository(){
 <Helmet>
         <title>Repositories</title>
         <meta name="descripiton" content="Daniels Github Repositories"/>
-      <meta name="Keywords" content="Github, Daniel, Repositories, Dveloper"/>
+      <meta name="Keywords" content="Github, Daniel, Repositories, Developer"/>
     </Helmet>
-Click <Link to="/FirstRepo" className="text-emerald-400" > Here</Link> to see Details of First Repo,
+<p className="pb-5">Click <Link to="/Repositories/FirstRepo" className="text-emerald-400 " > Here</Link> to see Details of First Repo,</p>
 {!items ? (
         <Loading />
       ) : (
@@ -59,6 +59,7 @@ Click <Link to="/FirstRepo" className="text-emerald-400" > Here</Link> to see De
 
 </div>
 )
+
 }
 
 

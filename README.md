@@ -2,12 +2,19 @@ From this site you can have access to my list of Repositories
 
 Also I have Implimented:
 
-Error boundary
-Routes
-SEO Friendly
-Pagenation
-API from my GitHub Repository
-Notfound Page (404 page)
+<ul>
+<li>Error boundary</li>
+<li>Routes</li>
+<li>SEO Friendly</li>
+<li>Pagenation</li>
+<li>API from my GitHub Repository</li>
+<li>Notfound Page (404 page)</li>
+</ul>
 
 
 https://github-ass.vercel.app/
+
+<em>Holiday assignment </em>
+Added Active page feature
+added followers,following and reposotory count on the first page
+

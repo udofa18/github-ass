@@ -1,13 +1,17 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 
-function firstRepo() {
+function FirstRepo() {
     return (
     <div>
+         <Helmet>
+        <title>Repo 1</title>
+    </Helmet>
         <h1>Repo 1</h1>
 
     </div>
    
     )
 }
-    export default firstRepo
+    export default FirstRepo
