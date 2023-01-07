@@ -14,7 +14,9 @@ Also I have Implimented:
 
 https://github-ass.vercel.app/
 
-<em>Holiday assignment </em>
-Added Active page feature
-added followers,following and reposotory count on the first page
+Holiday Assignment
+<li>Added Active page feature</li>
+<li>Worked on padding</li>
+<li>Added followers,following and reposotory count on the first page</li>
+<li>Used react Icons</li>
 
