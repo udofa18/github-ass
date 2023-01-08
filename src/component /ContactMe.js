@@ -32,22 +32,22 @@ function Contact() {
         <h1 className="text-emerald-400 text-2xl text-center">Contact Daniel Udofa Using the Following Social Media Handles:</h1>
         <ul className="flex gap-5 justify-center my-8">
         <a href="https://www.linkedin.com/in/daniel-udofa-865778149/">
-            <li className="my-3 flex items-center text-2xl  hover:text-orange-400">
+            <li className="my-3 flex items-center text-lg  hover:text-orange-400">
             <AiFillLinkedin/>
                 Linkedin
             </li></a>
             <a href="https://github.com/udofa18">
-            <li className="my-3 flex items-center text-2xl  hover:text-orange-400"> 
+            <li className="my-3 flex items-center text-lg  hover:text-orange-400"> 
             <AiFillGithub/>
                 GitHub
             </li></a>
             <a href="https://twitter.com/Udofa18">
-            <li className="my-3 flex items-center text-2xl hover:text-orange-400">
+            <li className="my-3 flex items-center text-lg hover:text-orange-400">
             <AiFillTwitterCircle/>
                 Twitter
             </li></a>
             <a href="https://t.me/phantom6040">
-            <li className="my-3 flex items-center text-2xl hover:text-orange-400">
+            <li className="my-3 flex items-center text-lg hover:text-orange-400">
             <FaTelegram/>
                 Telegram
             </li></a>
