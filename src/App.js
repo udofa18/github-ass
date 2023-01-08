@@ -121,9 +121,16 @@ function App() {
           </Suspense>
           </ErrorBoundary>
           </div>
-
-         
+          <br></br> <br></br>
+         <hr></hr>
+       <br></br>
+          <div className="bg-black border-black border h-60 pb-0">
           
+          <div>
+            <p className="px-4 py-4 text-2xl ">Connect with me today</p>
+          </div>
+
+          </div>
           </>
       
           </div>
